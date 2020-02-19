@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>HappyJar</title>
+        <link rel="stylesheet" href="reflection_page.css">
+        <link rel="stylesheet" href="index.js">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body id="container">
+        <main>
+            <header class="mdc-top-app-bar">
+                <div class="mdc-top-app-bar__row">
+                  <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <div class="mdc-top-app-bar__title"><i class="fas fa-chevron-left" onclick="window.location.href = '/homepage.html';"></i>Today's Reflection</div>
+                  </section>
+                </div>
+              </header>
+            <div class="mdc-card"></div>
+            <article id="reflection-page">
+                <section class="reflection-emoji">
+                    <!-- <div>
+                        <h3>How are you feeling?</h3>
+                        <div class = "emojis">
+                        <i class="far fa-sad-cry"></i>
+                        <i class="far fa-tired"></i>
+                        <i class="far fa-angry"></i>
+                        <i class="far fa-meh-blank"></i>
+                        <i class="far fa-smile-beam"></i>
+                        <i class="far fa-laugh"></i>   
+                        <i class="far fa-grin-hearts"></i>
+                        </div>
+                        <div class = "radio_bottons">
+                        <div class="mdc-form-field">
+                            <div class="mdc-radio">
+                              <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" checked>
+                              <div class="mdc-radio__background">
+                                <div class="mdc-radio__outer-circle"></div>
+                                <div class="mdc-radio__inner-circle"></div>
+                              </div>
+                              <div class="mdc-radio__ripple"></div>
+                          <div class="mdc-form-field">
+                            <div class="mdc-radio">
+                              <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios" checked>
+                              <div class="mdc-radio__background">
+                                <div class="mdc-radio__outer-circle"></div>
+                                <div class="mdc-radio__inner-circle"></div>
+                              </div>
+                              <div class="mdc-radio__ripple"></div>
+                        </div>
+                        </div>
+                    </div> -->
+                    <form id="smileys">
+                      <input type="radio" name="smiley" value="sad" class="sad">
+                      <input type="radio" name="smiley" value="neutral" class="neutral">
+                      <input type="radio" name="smiley" value="happy" class="happy" checked="checked">
+                    </form>
+                </section>
+
+                <section class="reflection">
+                    <div>
+                        <h3>What made you smile today?</h3>
+                        <div class="mdc-text-field mdc-text-field--textarea mdc-text-field--no-label">
+                            <textarea class="mdc-text-field__input" rows="8" cols="40" aria-label="Label"></textarea>
+                            <div class="mdc-notched-outline">
+                              <div class="mdc-notched-outline__leading"></div>
+                              <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                          </div>
+                    </div>
+                </section>
+
+                <section class="reflection">
+                    <div>
+                        <h3>What else?</h3>
+                        <div class="mdc-text-field mdc-text-field--textarea mdc-text-field--no-label">
+                            <textarea class="mdc-text-field__input" rows="8" cols="40" aria-label="Label"></textarea>
+                            <div class="mdc-notched-outline">
+                              <div class="mdc-notched-outline__leading"></div>
+                              <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                          </div>
+                    </div>
+                </section>
+                <button class=" save-btn mdc-fab" aria-label="Favorite" style="background-color:purple" onclick="document.location.href ='/homepage.html' ">
+                    <div class="mdc-fab__ripple"></div>
+                    <span class="mdc-fab__icon material-icons">check</span>
+                  </button>
+                  </article>
+        </main>
+        <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    </body>
+
+</html>
+
+<style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      height: 100%;
+    }
+  </style>
