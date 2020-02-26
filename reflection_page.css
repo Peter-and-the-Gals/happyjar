@@ -1,34 +1,20 @@
 
-/* aside, header, section, article {
-    display: flex;
-    flex-direction: column;
-} */
-    /* body {
-        grid-template-columns: auto;
-        grid-template-areas:
-           "main"
-           "bottom";
-        height: 100vh;
-    } */
-
     main {
         grid-area: main;
         overflow-y: auto;
-        background: #ebc3db;
+        background-color: #EDF8B1 !important;
     }
 
     header {
         left: 0px;
         width: 100vw;
-        background: #4a148c;
+        background-color: #4ca2db !important;
     }
-    /* aside {
-        display: none;
-    } */
  
 .mdc-top-app-bar__title {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 25px !important;
+    color: white !important;
 }
 .save-btn{
     position: fixed;
@@ -40,26 +26,20 @@
     padding-right: 20px;
     font-weight: 400;
     font-size: 22px;
+    color: white!important;
 }
 
 .radio_buttons {
     display: inline;
 }
 
-.reflection-emoji h3 {
-    color: white;
-    font-family: sans-serif;
-    font: arial;
-    font-weight: 400;
-    padding-left: 20px;
-}
-
 .reflection h3{
-    color: white;
+    color: grey;
     font-family: sans-serif;
     font: arial;
     font-weight: 400;
     padding-left: 20px;
+    font-size: 25px;
 }
 
 .mdc-text-field__input {
@@ -68,15 +48,10 @@
     margin-bottom: 20px;
 }
 
-
-.emojis{
-    font-size:32px;
-    padding: 3px;
-    color: white;
-    margin-left: 50px;
-} 
-
-
+.mdc-text-field {
+    margin: 30px;
+    height: 170px !important;
+}
   
   form#smileys input[type="radio"] {
     -webkit-appearance: none;
@@ -88,7 +63,7 @@
     transition: border .2s ease;
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
-    margin-top:60px;
+    margin-top:80px;
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
   }

@@ -5,32 +5,31 @@
     .demo-card-wide.mdl-card {
     }
     .reflection-card  > .mdl-card__title {
-      color: #dddddd;
+      color: #fff;
       height: 60%;
-      letter-spacing: 20px;
-      /* background: url('images/reflections.png') center / cover; */
+      background: url('images/reflections.png') center / cover;
     }
 
     .lookingback-card > .mdl-card__title {
-    color: #dddddd;
+    color: #fff;
       height: 60%;
-      /* background: url('images/LookingBack.png') center / cover; */
+      background: url('images/LookingBack.png') center / cover;
     }
 
     .settings-card > .mdl-card__title {
-    color: #dddddd;
+    color: #fff;
       height: 60%;
-      /* background: url('images/settings.png') center / cover; */
+      background: url('images/settings.png') center / cover;
     }
     .demo-card-wide > .mdl-card__menu {
-      color: #7fcdbb;
+      color: #fff;
     }
     #outercontainer
     {
         display: grid;
         width: 100%;
         height: 100%;
-        background-color: #edf8b1;
+        background-color: #4a148c;
         grid-template-areas: "reflection"
                             "lookingback"
                             "settings";
@@ -43,8 +42,6 @@
     {
         width:80%;
         height: 80%;
-        background-color: #4ca2db;
-        
     }
     .reflection-card 
     {
@@ -63,8 +60,6 @@
     .mdl-card__title-text
     {
         font-size: 3em;
-        letter-spacing: 20px;
-        text-align: left;
     }
     .mdl-card__supporting-text
     {
@@ -74,28 +69,28 @@
     }
     </style>
     <div id = "outerContainer">
-    <section class="mdl-button custom-card-overide reflection-card demo-card-wide mdl-card mdl-shadow--2dp" onclick="window.location.href = 'reflection.html';">
+    <section class="mdl-button custom-card-overide reflection-card demo-card-wide mdl-card mdl-shadow--2dp" onclick="window.location.href = '/reflection.html';">
       <div class="mdl-card__title">
         <h1 class="mdl-card__title-text">How was your day?</h1>
       </div>
       <div class="mdl-card__supporting-text">
-        
+        Remind yourself of the happiness that inbues your life and rid oneself of the negative stress and biases.
       </div>
     </section>
-    <section class=" mdl-button custom-card-overide lookingback-card demo-card-wide mdl-card mdl-shadow--2dp" onclick="window.location.href = 'reflections.html';" >
+    <section class=" mdl-button custom-card-overide lookingback-card demo-card-wide mdl-card mdl-shadow--2dp"  >
         <div class="mdl-card__title">
           <h1 class="mdl-card__title-text">Looking Back</h1>
         </div>
         <div class="mdl-card__supporting-text">
-         
+         Find the happy moments of your past and rejoice in the sea of memories that you recorded. Don't miss a single moment
         </div>
       </section>
-      <section class="mdl-button  custom-card-overide  settings-card demo-card-wide mdl-card mdl-shadow--2dp" onclick="window.location.href = 'reminders.html';" >
+      <section class="mdl-button  custom-card-overide  settings-card demo-card-wide mdl-card mdl-shadow--2dp" onclick="window.location.href = '/reminders.html';" >
         <div class="mdl-card__title">
           <h1 class="mdl-card__title-text">Settings</h1>
         </div>
         <div class="mdl-card__supporting-text">
-          
+          Change your reminder setting
         </div>
       </section>
 </div>
