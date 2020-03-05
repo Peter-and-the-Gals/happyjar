@@ -1,9 +1,129 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <body>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<script src="https://use.fontawesome.com/c47fe9c99c.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<style>
+    body{
+        font-family: 'Roboto', sans-serif;
+        margin:0;
+        padding:0;
+    }
+</style>
+<p>This is a tool to dynamically generate a word cloud based on your entries. Filter for your mood and the date range</p>
+<form id="smileys" onclick="formOnlick()">
+    <input type="radio" name="smiley" value="sad" class="sad">
+    <input type="radio" name="smiley" value="neutral" class="neutral">
+    <input type="radio" name="smiley" value="happy" class="happy" checked="checked">
+  </form>
+<div id="reportrange" style="">
+    <i class="fa fa-calendar"></i>&nbsp;
+    <span></span> <i class="fa fa-caret-down"></i>
+</div>
+<style>
+    #reportrange
+    {
+        padding-left:1%;
+        padding-right:2%;
+        padding-top: 1.5%;
+        padding-bottom:1.5%;
+        margin-left: 2%;
+        margin-right:2%;
+        background: #fff; 
+        cursor: pointer; 
+         border: 1px solid #ccc; 
+         font-size: 1em;
+         
+    }
+</style>
 <svg id="wordcloud"></svg>
 
+<script type="text/javascript">
+$(function() {
+
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        formOnlick();
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+           'Today': [moment(), moment()],
+           'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+           'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+           'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+           'This Month': [moment().startOf('month'), moment().endOf('month')],
+           'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+
+});
+</script>
+<style>
+
+    .ranges li 
+    {
+        font-size: 1em !important;
+        height: 3vh !important;
+        
+    }
+    .ranges ul {
+        /* width:40vw !important; */
+
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-content: center;
+    }
+</style>
 <!-- load the d3.js library -->    	
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="visualwordcloud.js"></script>
+<style>
+    form#smileys input[type="radio"] {
+    -webkit-appearance: none;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: border .2s ease;
+    transition: border .2s ease;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+    /* margin-top:px; */
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+  }
+  form#smileys input[type="radio"]:hover, form#smileys input[type="radio"]:checked {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+  }
+  form#smileys input[type="radio"]:focus {
+    outline: 0;
+  }
+  form#smileys input[type="radio"].happy {
+    background: url("https://res.cloudinary.com/turdlife/image/upload/v1492864443/happy_ampvnc.svg") center;
+    background-size: cover;
+  }
+  form#smileys input[type="radio"].neutral {
+    background: url("https://res.cloudinary.com/turdlife/image/upload/v1492864443/neutral_t3q8hz.svg") center;
+    background-size: cover;
+  }
+  form#smileys input[type="radio"].sad {
+    background: url("https://res.cloudinary.com/turdlife/image/upload/v1492864443/sad_bj1tuj.svg") center;
+    background-size: cover;
+  }
+</style>
 </body>

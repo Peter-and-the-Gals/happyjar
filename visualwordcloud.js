@@ -1,3 +1,22 @@
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
 
 let pack = data => d3.pack()
     .size([width - 2, height - 2])
@@ -5,19 +24,32 @@ let pack = data => d3.pack()
   (d3.hierarchy({children: data})
     .sum(d => d.value))
 // var data = d3.csvParse(await FileAttachment("flare.csv").text(), ({id, value}) => ({name: id.split(".").pop(), title: id.replace(/\./g, "/"), group: id.split(".")[1], value: +value}))
-var data =[
-    {name: "School", title: "flare", group: 1, value: 10},
-    {name: "Soccer", title: "flare/analytics", group: 2, value: 20},
-    {name: "Amazon", title: "flare/analytics/cluster/AgglomerativeCluster", group: 3, value: 39},
-    {name: "Internship", title: "flare/analytics/cluster/AgglomerativeCluster", group: 4, value: 39},
-    {name: "Beauty", title: "flare/analytics/cluster/AgglomerativeCluster", group: 5, value: 39},
-    {name: "Boyfriend", title: "flare/analytics/cluster/AgglomerativeCluster", group: 6, value: 39}
+var dataRaw =[
+    {name: "School",  group: 1, value: 10},
+    {name: "Soccer",  group: 2, value: 20},
+    {name: "Amazon",  group: 3, value: 39},
+    {name: "Internship",  group: 4, value: 39},
+    {name: "Beauty",  group: 5, value: 39},
+    {name: "Boyfriend", group: 6, value: 41},
+    {name: "Painting", group: 6, value: 26},
+    {name: "Game", group: 6, value: 10},
+    {name: "Grades", group: 6, value: 30},
+    {name: "Food", group: 6, value: 28},
+    {name: "Weather", group: 6, value: 40}
+    
 ]
+let data = shuffle(dataRaw);
 
 let width = 932
 let height = width;
 let format = d3.format(",d")
 let color = d3.scaleOrdinal(data.map(d => d.group), d3.schemeCategory10)
+const populateData = ()=>
+{
+
+  let wordcloud_ = document.getElementById("wordcloud")
+  wordcloud_.innerHTML = "";
+
 const root = pack(data);
   
 const svg = d3.select("#wordcloud")
@@ -53,3 +85,11 @@ leaf.append("text")
 
 leaf.append("title")
     .text(d => `${d.data.title}\n${format(d.value)}`);
+}
+
+populateData();
+const formOnlick =()=>
+{
+  data = shuffle(dataRaw);
+  populateData();
+}

@@ -36,10 +36,12 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import TimelineIcon from "@material-ui/icons/Timeline";
+import "./styles.css";
+import { DatePicker } from "@material-ui/pickers";
 const primaryTheme = createMuiTheme({
   palette: {
     primary: {
-     main: "#4ca2db"
+      main: "#4ca2db"
     },
     secondary: {
       main: "#1b5e20"
@@ -82,9 +84,13 @@ class TopBar extends React.Component {
                 aria-label="menu"
                 onClick={() => (document.location.href = "homepage.html")}
               >
-                <ArrowBackIosIcon style ={{color:"white"}}/>
+                <ArrowBackIosIcon style={{ color: "white" }} />
               </IconButton>
-              <Typography variant="h6" className={classes.title} style={{color:"white"}}>
+              <Typography
+                variant="h6"
+                className={classes.title}
+                style={{ color: "white" }}
+              >
                 Looking Back
               </Typography>
               <img
@@ -195,101 +201,99 @@ const RowofReflection = ({
 
 const ReminderBody = () => {
   const styles = ReminderBodyStyles();
-  const switchPage = (event, pagenum)=>
-  {
+  const switchPage = value => {
     switch(pagenum)
     {
-      case 1:
-        window.location.href = 'monthly.html';
+      case 0:
+        window.location.href = 'reflections.html';
         break;
         case 2:
           window.location.href = 'visualisation.html';
           break;
     }
-  }
-
+  };
+  const [selectedDate, handleDateChange] = React.useState(new Date());
   return (
     <ThemeProvider theme={primaryTheme}>
       <div className={styles.reminderBody} style={{ marginBottom: 80 }}>
         <TopBar />
         <br />
+        <MuiPickersUtilsProvider utils={DateFnsUtils}>
+          <DatePicker
+            style={{ marginLeft: "2%", marginBottom: "2%" }}
+            views={["year", "month"]}
+            label="Year and Month"
+            scrollMarginBottom
+            value={selectedDate}
+            onChange={handleDateChange}
+            minDate={new Date("2015-03-04")}
+            maxDate={new Date("2020-03-04")}
+            helperText="Select the month you want to reflect on "
+          />
+        </MuiPickersUtilsProvider>
+        <div id="fullDiv">
+          <ul style={{ margin: 0, padding: 0 }}>
+            <li>SUN</li>
+            <li>MON</li>
+            <li>TUE</li>
+            <li>WED</li>
+            <li>THUR</li>
+            <li>FRI</li>
+            <li>SAT</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>30</li>
+            <li>31</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+        </div>
         <RowofReflection />
-        <RowofReflection
-          statusColor="#c2b93e"
-          dateStr={
-            <React.Fragment>
-              MON <br /> 07
-            </React.Fragment>
-          }
-          title="Not the best day"
-          detail="I don't think the quiz went great, but on a positive note CS110 is quite fun"
-        />
-        <RowofReflection
-          dateStr={
-            <React.Fragment>
-              TUE <br /> 08
-            </React.Fragment>
-          }
-          title="Internship Offer LET'S GO"
-          detail="facebook reached back with an offer. I am so keen to finally go to silicon valley!"
-        />
-        <RowofReflection
-          dateStr={
-            <React.Fragment>
-              WED <br /> 09
-            </React.Fragment>
-          }
-          title="Just a self care day"
-          detail="Not much happened; I enjoyed every single second of it though. Wish everyday could be like this!"
-        />
-        <RowofReflection
-          statusColor="#c2b93e"
-          dateStr={
-            <React.Fragment>
-              Thur <br /> 10
-            </React.Fragment>
-          }
-          title="Not the best day"
-          detail="I don't think the quiz went great, but on a positive note CS110 is quite fun"
-        />
-        <RowofReflection
-          statusColor="#c2b93e"
-          dateStr={
-            <React.Fragment>
-              Fri <br /> 10
-            </React.Fragment>
-          }
-          title="Not the best day"
-          detail="I don't think the quiz went great, but on a positive note CS110 is quite fun"
-        />
-        <RowofReflection
-          statusColor="#c2b93e"
-          dateStr={
-            <React.Fragment>
-              Sat <br /> 10
-            </React.Fragment>
-          }
-          title="Not the best day"
-          detail="I don't think the quiz went great, but on a positive note CS110 is quite fun"
-        />
-        <Grid
-          container
-          direction="column"
-          justify="center"
-          alignItems="center"
-        />
       </div>
       <Paper square style={{ position: "fixed", bottom: 0, width: "100%" }}>
         <Tabs
-          value={0}
+          value={1}
+          onChange={switchPage}
           variant="fullWidth"
           indicatorColor="secondary"
           textColor="secondary"
           aria-label="icon label tabs example"
-          onChange ={switchPage}
         >
           <Tab icon={<ViewWeekIcon />} label="Weekly" />
-          <Tab icon={<DateRangeIcon />} label="Monthly" />
+          <Tab
+            icon={<DateRangeIcon />}
+            label="Monthly"
+            onclick="console.log('1')"
+          />
           <Tab icon={<TimelineIcon />} label="Overview" />
         </Tabs>
       </Paper>
