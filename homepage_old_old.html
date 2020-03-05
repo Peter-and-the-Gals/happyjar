@@ -4,37 +4,21 @@
 <style>
     .demo-card-wide.mdl-card {
     }
-
-    .title-card  > .mdl-card__title {
-      color: white;
-      height: 30%;
-      letter-spacing: 20px;
-      margin-top: 100px;
-    }
-
-    .mdl-card__jar-image {
-      align-self: center;
-      background: url('images/happyjar2.jpg') center / cover;
-      height: 60%;
-      width: 45%;
-      margin-bottom: 200px;
-    }
-
     .reflection-card  > .mdl-card__title {
-      color: white;
+      color: #dddddd;
       height: 60%;
       letter-spacing: 20px;
       /* background: url('images/reflections.png') center / cover; */
     }
 
     .lookingback-card > .mdl-card__title {
-    color: white;
+    color: #dddddd;
       height: 60%;
       /* background: url('images/LookingBack.png') center / cover; */
     }
 
     .settings-card > .mdl-card__title {
-    color: white;
+    color: #dddddd;
       height: 60%;
       /* background: url('images/settings.png') center / cover; */
     }
@@ -47,12 +31,11 @@
         width: 100%;
         height: 100%;
         background-color: #edf8b1;
-        grid-template-areas: "title"
-                            "reflection"
+        grid-template-areas: "reflection"
                             "lookingback"
                             "settings";
         grid-template-columns: 100%;
-        grid-template-rows: 65% 10% 10% 10% ;
+        grid-template-rows: 40% 40% 20% ;
         align-items: center;
         justify-items: center;
     }
@@ -63,21 +46,6 @@
         background-color: #4ca2db;
         
     }
-
-    .custom-card-overide-1
-    {
-        width:80%;
-        height: 80%;
-        background-color: white;
-        
-    }
-
-    .title-card
-    {
-        grid-area: title;
-       
-    }
-
     .reflection-card 
     {
         grid-area: reflection;
@@ -92,23 +60,11 @@
     {
         grid-area: settings;
     }
-
-    .mdl-card__main-title-text
-    {
-      font-size: 6em;
-        letter-spacing: 20px;
-        text-align: center !important;
-        font-weight: 700;
-        padding-left: 40px;
-        color: #4ca2db !important;
-    }
-
     .mdl-card__title-text
     {
         font-size: 3em;
         letter-spacing: 20px;
         text-align: left;
-        font-weight: 500;
     }
     .mdl-card__supporting-text
     {
@@ -118,17 +74,9 @@
     }
     </style>
     <div id = "outerContainer">
-    <section class="custom-card-overide-1 title-card demo-card-wide mdl-card mdl-shadow--2dp">
-      <div class="mdl-card__title">
-        <h1 class="mdl-card__main-title-text">HAPPYJAR</h1>
-      </div>
-      <div class="mdl-card__jar-image">
-        
-      </div>
-    </section>
     <section class="mdl-button custom-card-overide reflection-card demo-card-wide mdl-card mdl-shadow--2dp" onclick="window.location.href = 'reflection.html';">
       <div class="mdl-card__title">
-        <h1 class="mdl-card__title-text">REFLECT</h1>
+        <h1 class="mdl-card__title-text">How was your day?</h1>
       </div>
       <div class="mdl-card__supporting-text">
         
@@ -136,7 +84,7 @@
     </section>
     <section class=" mdl-button custom-card-overide lookingback-card demo-card-wide mdl-card mdl-shadow--2dp" onclick="window.location.href = 'reflections.html';" >
         <div class="mdl-card__title">
-          <h1 class="mdl-card__title-text">LOOK BACK</h1>
+          <h1 class="mdl-card__title-text">Looking Back</h1>
         </div>
         <div class="mdl-card__supporting-text">
          
@@ -144,7 +92,7 @@
       </section>
       <section class="mdl-button  custom-card-overide  settings-card demo-card-wide mdl-card mdl-shadow--2dp" onclick="window.location.href = 'reminders.html';" >
         <div class="mdl-card__title">
-          <h1 class="mdl-card__title-text">REMINDERS</h1>
+          <h1 class="mdl-card__title-text">Settings</h1>
         </div>
         <div class="mdl-card__supporting-text">
           
