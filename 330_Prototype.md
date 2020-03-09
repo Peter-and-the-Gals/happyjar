@@ -20,17 +20,17 @@ A description of your three components you chose to implement
 # High-Fidelity Prototyping (P5, P6, & P7)
 
 ## Overview
-During the past four weeks, we have created a high-fidelity prototype that simulates an user's interaction with the negative bias App - "Happy Jar". We have created three to four components that can faciliate users to reduce their focus on negative biases by supporting the key tasks detailed below that through user interviews and paper prototyping. 
+During the past four weeks, we have created a high-fidelity prototype that simulates a user's interaction with the negative bias App - "Happy Jar". We have created three to four components that can facilitate users to reduce their focus on negative biases by supporting the key tasks detailed below that through user interviews and paper prototyping. 
 
 ## Tasks, Components and Implementations
 
 ### Reflection
-Through user interviews and persona analysis, we have ascertained that there is a geniune demand for users to keep track of the thoughts that make them happy and have a place to release the negative energies that hinder their hapiness. Users should be able to use HappyJar to record their feelings in a textual manner, guided by quick overviews of their mood through the use of emoticons. 
+Through user interviews and persona analysis, we have ascertained that there is a genuine demand for users to keep track of the thoughts that make them happy and have a place to release the negative energies that hinder their happiness. Users should be able to use HappyJar to record their feelings in a textual manner, guided by quick overviews of their mood through the use of emoticons. 
 
 #### Implementation and Component
 We have opted for a data collection form to be implemented that allows users to input their emotions in both a textual and none-textual manner. As shown in Figure 4.1, the reflection form mainly consists of four parts, the emoticon selection radio button, the two text entry boxes and the submit floating action button. 
 
-The forms are designed following the best practices recommended by (Penzo, 2006) and (Babich, 2018), utilising top allignment and reducing the complexity of the perception of complexity and interaction cost, which are particularly importnat for mobile forms. To this end, we have used an colour overlay to represent an emoticon selection, while making the labels for the fields natural questions as opposed to statements. e.g. "How do you feel today?" vs "Your emotional state:". 
+The forms are designed following the best practices recommended by (Penzo, 2006) and (Babich, 2018), utilising top alignment and reducing the complexity of the perception of complexity and interaction cost, which are particularly important for mobile forms. To this end, we have used an colour overlay to represent an emoticon selection, while making the labels for the fields natural questions as opposed to statements. e.g. "How do you feel today?" vs "Your emotional state:". 
 
 ![4-1](ReportResources/4-1.png)
 Figure 4.1- The Reflection Form
@@ -76,7 +76,7 @@ Figure 4.7 - Monthly Overview Page
 As a more advanced reflection feature, the Happiness wordcloud enables users to have a high level perspective of the aspects of their lives that make them happy. This could offer insights to the users on how to further improve their well-being. Through the Happiness Wordcloud, the users can select the mood, date-range to generate a word cloud whose entry and their reflective sizes are based on a statistical analysis of the reflections that the users entered in the period thereof.
 
 #### Implementation and Component
-As shown in Figure 4.8, the page consists of three main parts. Namely, an emoticon selector consistant with the one used in the reflection page, a date range selector(Figure 4.9), and a generated WordCloud. The emoticon and the date range filters for the data-range, while the word cloud is a d3 powered visualisation on the data queried by the two filter mechanisms. Again, this is a proof of visual concept as no real database query has been performed.
+As shown in Figure 4.8, the page consists of three main parts. Namely, an emoticon selector consistent with the one used in the reflection page, a date range selector(Figure 4.9), and a generated WordCloud. The emoticon and the date range filters for the data-range, while the word cloud is a d3 powered visualisation on the data queried by the two filter mechanisms. Again, this is a proof of visual concept as no real database query has been performed.
 
 ![4-8](ReportResources/4-8.png)
 Figure 4.8 - Happiness WordCloud
@@ -84,15 +84,15 @@ Figure 4.8 - Happiness WordCloud
 ### Branding, Colours and Design Language
 We aim to create a pleasing atmosphere for people to reflect.... xxx and xxx notes that green and yellow are the most calming colour.. (Charlotte Could you please move some content from your extra credit project to this??)
 
-Furthermore, we have adopted the material design philosophy for the pages designed. This is done with two considerations in mind. Firstly, Material design is widely used and accepted as one of the principal UI design paradym for mobile devices. With Android and Google technologies attaining such prevelance, this standard provides a sense of consistancy for the user. Secondly, material design especially with the way shadows are used creates depth in such a way that maintains the affordance of the UI element one associate with a tradtional computer interface, while still remain visually pleasing through the use of bright colours and the semi-flat design. 
+Furthermore, we have adopted the material design philosophy for the pages designed. This is done with two considerations in mind. Firstly, Material design is widely used and accepted as one of the principal UI design paradigm for mobile devices. With Android and Google technologies attaining such prevalence, this standard provides a sense of consistency for the user. Secondly, material design especially with the way shadows are used creates depth in such a way that maintains the affordance of the UI element one associate with a traditional computer interface, while still remain visually pleasing through the use of bright colours and the semi-flat design. 
 
 >A material metaphor is the unifying theory of a rationalized space and a system of motion. Our material is grounded in tactile reality, inspired by our study of paper and ink, yet open to imagination and magic.
 
-"Paper" is a major element of material design utilised in the App. In short, it provides an elevation that seperates the elements in the paper against the background, accentuating the contents contained within. Looking back to figure 4.6 for instance, the month and year selection has a visual simile to a real paper. This tactile parallel to paper provides a natural and initutive mapping to the real world, emphasising the selection, while not compromising the modern visual attributes. 
+"Paper" is a major element of material design utilised in the App. In short, it provides an elevation that separates the elements in the paper against the background, accentuating the contents contained within. Looking back to figure 4.6 for instance, the month and year selection has a visual simile to a real paper. This tactile parallel to paper provides a natural and initiative mapping to the real world, emphasising the selection, while not compromising the modern visual attributes. 
 
 Indeed, the use of dimensionality is one that the app considered thoroughly in its design. In Figure 4.5, a traditional grid is no longer demarcated by lines but rather through the natural lighting and the shapes of the cells. This relationship directly informs the users on the hierarchy of the visual elements such as on how the reflections are of equal footing to one another while following down temporally. 
 
-The minimalist design pattern creates a strong empahsis on user driven actions. This is best represented through the floating action buttons emoloyed in the various pages. These FABs, while not containing any texts, uses iconography to communicate the actions they intended. Looking at figure 4.3 and 4.1, one could immediately determine that these buttons not only floats(hence the floating action buttons) creating a sense of dimentsionality, but they also disrupts the flow of the document in such a way that uses empahsis to create contrasts. This accentrates the functionality and illuminates the waypoints for the users.
+The minimalist design pattern creates a strong emphasis on user driven actions. This is best represented through the floating action buttons employed in the various pages. These FABs, while not containing any texts, uses iconography to communicate the actions they intended. Looking at figure 4.3 and 4.1, one could immediately determine that these buttons not only floats(hence the floating action buttons) creating a sense of dimensionality, but they also disrupts the flow of the document in such a way that uses emphasis to create contrasts. This accentuates the functionality and illuminates the waypoints for the users.
 
 
 # Appendix 
