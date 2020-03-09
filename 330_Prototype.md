@@ -33,10 +33,12 @@ We have opted for a data collection form to be implemented that allows users to 
 The forms are designed following the best practices recommended by (Penzo, 2006) and (Babich, 2018), utilising top alignment and reducing the complexity of the perception of complexity and interaction cost, which are particularly important for mobile forms. To this end, we have used an colour overlay to represent an emoticon selection, while making the labels for the fields natural questions as opposed to statements. e.g. "How do you feel today?" vs "Your emotional state:". 
 
 ![4-1](ReportResources/4-1.png)
+
 Figure 4.1- The Reflection Form
 
 Lastly, per user testing, we have introduced a feedback system where the app would confirm that a user's reflection has be recorded (Figure 4.2).
 ![4-2](ReportResources/4-2.png)
+
 Figure 4.2 - Active Confirmation
 
 ### Reminders
@@ -46,11 +48,13 @@ The same persona analysis points out the importance for a more active system whe
 To implement this task, we have designed an interactive reminder page where users could add as many reminders as needed. By positioning the floating action buttons directly under the helper texts, we ensure that users can find it with relative ease. Every time a user presses the add button, a new reminder cell will be created, allowing users to modify the time they wish to be reminded on. 
 
 ![4-3](ReportResources/4-3.png)
+
 Figure 4.3 - Adding reminders
 
 Changing the time of the notification has also been optimised for a mobile interface. The large clockface is shown with dragging enabled. This emulates the experience of an native application and has a direct natural mapping(Figure 4.4). This consistute as an advanced form with a more novel data collection field.
 
 ![4-4](ReportResources/4-4.png)
+
 Figure 4.4 - Clock face 
 
 ### Weekly And Monthly View
@@ -60,15 +64,18 @@ After recording one's thoughts and feelings, many users reported that looking ba
 In the weekly view, a series of cells are displayed to represent the reflections in the week. To promote positive thinking, we have only colour-coded the cells using two colours corresponding with the feeling good and feeling alright emoticon on the reflection page (Figure 4.5).
 
 ![4-5](ReportResources/4-5.png)
+
 Figure 4.5 - Weekly Overview
 
 For the monthly view, we employed a mobile friendly Month and Year selection field for the user to narrow down the range they wish to look back at(Figure 4.6). After this range is selected, users can select the specific day they wish to look back at using the custom calendar. A reflection cell, similar to those used in the weekly view shall contain the reflections of the day the user selected(Figure 4.7) Note that this prototype is mainly for illustrating the functionality visually. Some interactions are not implemented. 
 
 ![4-6](ReportResources/4-6.png)
+
 Figure 4.6 - Mobile Friendly Month and Year Selector
 
 
 ![4-7](ReportResources/4-7.png)
+
 Figure 4.7 - Monthly Overview Page
 
 
@@ -79,6 +86,7 @@ As a more advanced reflection feature, the Happiness wordcloud enables users to 
 As shown in Figure 4.8, the page consists of three main parts. Namely, an emoticon selector consistent with the one used in the reflection page, a date range selector(Figure 4.9), and a generated WordCloud. The emoticon and the date range filters for the data-range, while the word cloud is a d3 powered visualisation on the data queried by the two filter mechanisms. Again, this is a proof of visual concept as no real database query has been performed.
 
 ![4-8](ReportResources/4-8.png)
+
 Figure 4.8 - Happiness WordCloud
 
 ### Branding, Colours and Design Language
