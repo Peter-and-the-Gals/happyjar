@@ -83,7 +83,7 @@ Figure 4.7 - Monthly Overview Page
 As a more advanced reflection feature, the Happiness wordcloud enables users to have a high level perspective of the aspects of their lives that make them happy. This could offer insights to the users on how to further improve their well-being. Through the Happiness Wordcloud, the users can select the mood, date-range to generate a word cloud whose entry and their reflective sizes are based on a statistical analysis of the reflections that the users entered in the period thereof.
 
 #### Implementation and Component
-As shown in Figure 4.8, the page consists of three main parts. Namely, an emoticon selector consistent with the one used in the reflection page, a date range selector(Figure 4.9), and a generated WordCloud. The emoticon and the date range filters for the data-range, while the word cloud is a d3 powered visualisation on the data queried by the two filter mechanisms. Again, this is a proof of visual concept as no real database query has been performed.
+As shown in Figure 4.8, the page consists of three main parts. Namely, an emoticon selector consistent with the one used in the reflection page, a date range selector(Figure 4.9), and a generated WordCloud. The emoticon and the date range filters for the data-range, while the word cloud is a d3 powered visualisation on the data queried by the two filter mechanisms. Again, this is a proof of visual concept as no real database query has been performed. Rather than using a line chart which is more accurate, a word cloud is more intutitive and can be more emotive, fitting this app which is built around emotions.
 
 ![4-8](ReportResources/4-8.png)
 
