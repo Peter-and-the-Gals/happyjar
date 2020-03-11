@@ -20,14 +20,51 @@ li:nth-child(n + 1):nth-child(-n + 7) {
   color: #4ca2db;
 }
 
+li:nth-child(3n+11)
+{
+  border-radius: 5px;
+  color: white;
+  background-color: #5fb551;
+}
+
+li:nth-child(5n+18)
+{
+  border-radius: 5px;
+  color: white;
+  background-color: #c2b93e;
+}
+
+li:nth-child(9n+19)
+{
+  border-radius: 5px;
+  color: white;
+  background-color: #5fb551;
+}
+
+
+li:nth-child(11n+8)
+{
+  border-radius: 5px;
+  color: white;
+  background-color: #5fb551;
+}
+
+li:nth-child(13n+9)
+{
+  border-radius: 5px;
+  color: white;
+  background-color: #c2b93e;
+}
+
+
 li:nth-child(n + 39),
-li:nth-child(n + 8):nth-child(-n + 16) {
+li:nth-child(n + 8):nth-child(-n + 7) {
   font-weight: 900;
+  background-color: transparent;
   color: rgba(0, 0, 0, 0.3);
 }
 
-li:hover:nth-child(n + 8):nth-child(-n + 38),
-li:nth-child(17) {
+li:hover:nth-child(n + 8) {
   border-radius: 5px;
   background-color: #4ca2db;
   color: #ecf0f1;

@@ -15,7 +15,7 @@
         padding:0;
     }
 </style>
-<p>This is a tool to dynamically generate a word cloud based on your entries. Filter for your mood and the date range</p>
+<p style="margin-left: 10px;">This is a tool to dynamically generate a word cloud based on your entries. Filter for your mood and the date range</p>
 <form id="smileys" onclick="formOnlick()">
     <input type="radio" name="smiley" value="sad" class="sad">
     <input type="radio" name="smiley" value="neutral" class="neutral">
@@ -93,6 +93,7 @@ $(function() {
 <script src="visualwordcloud.js"></script>
 <style>
     form#smileys input[type="radio"] {
+      margin-left: 10px;
     -webkit-appearance: none;
     width: 50px;
     height: 50px;

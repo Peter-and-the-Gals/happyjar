@@ -133,6 +133,7 @@ const ReminderBodyStyles = makeStyles(theme => ({
   }
 }));
 
+
 const RowofReflection = ({
   statusColor = "#5fb551",
   dateStr = (
@@ -141,8 +142,15 @@ const RowofReflection = ({
     </React.Fragment>
   ),
   title = "A pretty good day",
-  detail = "I got an 100% on my CS214 Midterm and I feel like I am so happy~~"
+  detail = "I got an 100% on my CS214 Midterm and I feel like I am so happy~~",
+  hidden = false
 }) => {
+  
+  let hide_str = "visible"
+  if(hidden)
+  {
+    hide_str = "hidden"
+  }
   return (
     <Grid
       container
@@ -152,6 +160,7 @@ const RowofReflection = ({
       direction="row"
       justify="left"
       alignItems="center"
+      style = {{visibility:hide_str}}
     >
       <Grid item container xs={2} justify="center">
         <img
@@ -201,7 +210,7 @@ const RowofReflection = ({
 
 const ReminderBody = () => {
   const styles = ReminderBodyStyles();
-  const switchPage = value => {
+  const switchPage = (event,pagenum) => {
     switch(pagenum)
     {
       case 0:
@@ -212,15 +221,61 @@ const ReminderBody = () => {
           break;
     }
   };
-  const [selectedDate, handleDateChange] = React.useState(new Date());
+  const [selectedDate, handleDateChange_] = React.useState(new Date());
+ 
+
+  const [shouldHideCal, changeShouldHideCal] = React.useState(true);
+  const handleDateChange = (event)=>
+  {
+    changeShouldHideCal(false);
+  }
+
+  const [shouldHideReflection, changeShouldHideReflection] = React.useState(true);
+
+  const [rowtitle, setrowtitle] = React.useState("A pretty good day");
+  const [rowdetail, setrowdetail] = React.useState("I got an 100% on my CS214 Midterm !");
+
+  const [datestr, setdatestr] = React.useState(
+    <React.Fragment>
+      Thur <br /> 10
+    </React.Fragment>
+  )
+  const getEventTarget = (e) => {
+    e = e || window.event;
+    return e.target || e.srcElement; 
+}
+  const calendarClicked = (event)=>
+  {
+    var target = getEventTarget(event);
+    let date = +target.textContent;
+    const dayArr = ["SAT", "SUN", "MON","TUE","WED","THUR","FRI"]
+    let day = dayArr[date%7]
+    setdatestr(<React.Fragment>
+      {day} <br /> {date}
+    </React.Fragment>);
+    changeShouldHideReflection(false)
+    var index = Math.floor(Math.random() * 3);
+    const titleArr = ["A pretty good day", "Internship Offer LET'S GO","Just a self care day"]
+    const detailArr = ["I got an 100% on my CS214 Midterm and I feel like I am so happy~~",
+    "facebook reached back with an offer. I am so keen to finally go to silicon valley!", "I didn't do much lol but generally relaxing"]
+    setrowtitle(titleArr[index]);
+    setrowdetail(detailArr[index]);
+  }
+
   return (
     <ThemeProvider theme={primaryTheme}>
       <div className={styles.reminderBody} style={{ marginBottom: 80 }}>
         <TopBar />
         <br />
+          <Typography
+                variant="h6"
+                style={{ color: "black", marginLeft:10, marginBottom:10 }}
+          >
+            Which month would you like to look back?
+          </Typography>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
           <DatePicker
-            style={{ marginLeft: "2%", marginBottom: "2%" }}
+            style={{ marginLeft: "2%", marginBottom: "2%" , fontSize:"3em"}}
             views={["year", "month"]}
             label="Year and Month"
             scrollMarginBottom
@@ -231,8 +286,14 @@ const ReminderBody = () => {
             helperText="Select the month you want to reflect on "
           />
         </MuiPickersUtilsProvider>
-        <div id="fullDiv">
-          <ul style={{ margin: 0, padding: 0 }}>
+        <div id="fullDiv" hidden ={shouldHideCal}>
+        <Typography
+                variant="h6"
+                style={{ color: "black", marginLeft:10, marginBottom:10 }}
+          >
+           Which day do you want to look back?
+          </Typography>
+          <ul style={{ margin: 0, padding: 0 }} onClick={calendarClicked}>
             <li>SUN</li>
             <li>MON</li>
             <li>TUE</li>
@@ -277,7 +338,7 @@ const ReminderBody = () => {
             <li>4</li>
           </ul>
         </div>
-        <RowofReflection />
+        <RowofReflection hidden={shouldHideReflection} title={rowtitle} detail={rowdetail} dateStr={datestr}/>
       </div>
       <Paper square style={{ position: "fixed", bottom: 0, width: "100%" }}>
         <Tabs

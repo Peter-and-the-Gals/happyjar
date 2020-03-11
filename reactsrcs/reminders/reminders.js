@@ -100,14 +100,15 @@ const ReminderBodyStyles = makeStyles(theme => ({
     // backgroundColor: "#4a148c"
   },
   addActionBtn: {
-    position: "fixed",
+    position: "sticky",
     bottom: 10,
-    right: 10
+    marginLeft:10,
   },
   finishActionBtn: {
-    position: "fixed",
+    position: "sticky",
+    float:"right",
     bottom: 10,
-    left: 10
+    marginRight:10,
   },
   innerReminders: {
     // marginTop: "1%",
@@ -196,13 +197,13 @@ const ReminderBody = () => {
             Click the add button to add an reminder
           </Typography>
           <img
-            src="images/happyjar.png"
+            src="images/happyjar3.png"
             alt=""
             style={{
-              width: "70%",
-              height: "70%",
-              marginLeft: "5%",
-              marginTop: "5%"
+              width: "20%",
+              height: "20%",
+              marginLeft: "30%",
+              marginRight: "30%"
             }}
           />
         </div>

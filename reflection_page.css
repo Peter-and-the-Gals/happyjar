@@ -1,5 +1,6 @@
 
     main {
+      height: 100%;
         grid-area: main;
         overflow-y: auto;
         background-color: #EDF8B1 !important;
@@ -20,6 +21,27 @@
     position: fixed;
     left:10px;
     bottom:10px;
+}
+
+textarea::placeholder
+{
+  color:rgba(50,50,50,0.5) !important;
+  /* outline: none !important;
+  border:1px solid red; */
+}
+
+textarea
+{
+  font-size: 1.15em !important;
+}
+
+.mdc-text-field
+{
+ 
+  /* font-size: 1em !important; */
+   outline: none !important;
+  border:1px solid black;
+  /* border-color: red !important; */
 }
 
 .fa-chevron-left {
@@ -64,6 +86,7 @@
 }
   
   form#smileys input[type="radio"] {
+    margin-left:30px;
     -webkit-appearance: none;
     width: 90px;
     height: 90px;
