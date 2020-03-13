@@ -26,7 +26,14 @@
   - [References](#references)
 - [Reflection](#reflection-1)
   - [Stages of Evolution for the Home Page](#stages-of-evolution-for-the-home-page)
+      - [Paper Prototype:](#paper-prototype)
+      - [First Draft:](#first-draft)
+      - [Second Draft:](#second-draft)
+      - [Final Draft:](#final-draft)
   - [Stages of Evolution for the Weekly Overview Page](#stages-of-evolution-for-the-weekly-overview-page)
+      - [Paper Prototype:](#paper-prototype-1)
+      - [First Draft:](#first-draft-1)
+      - [Final Draft:](#final-draft-1)
   - [Moving Forward](#moving-forward)
 - [Links:](#links)
 
@@ -267,16 +274,20 @@ Through computer prototyping we learned and were able to accomplish:
 
 ## Stages of Evolution for the Home Page
 
-Paper Prototype:
+#### Paper Prototype:
+
 ![5-1](ReportResources/5-1.png)
 
-First Draft:
+#### First Draft:
+
 ![5-2](ReportResources/5-2.png)
 
-Second Draft:
+#### Second Draft:
+
 ![5-3](ReportResources/5-3.png)
 
-Final Draft:
+#### Final Draft:
+
 ![5-4](ReportResources/5-4.png)
 
 - We learned to add more helper text to make the app easier to use
@@ -286,12 +297,16 @@ Final Draft:
 
 ##  Stages of Evolution for the Weekly Overview Page
 
-Paper Prototype:
+#### Paper Prototype:
+
 ![5-5](ReportResources/5-5.png)
-Draft 1:
+#### First Draft:
+
 ![5-6](ReportResources/5-6.png)
-Draft 2:
+#### Final Draft:
+
 ![5-7](ReportResources/5-7.png)
+
 We've made the interface more intutive to understand and make sure the colour scheme is consistent with the rest of the UI. The paper model is used in correspondance with the material design paradiym.
 
 ## Moving Forward
